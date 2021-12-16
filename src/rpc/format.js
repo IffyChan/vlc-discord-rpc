@@ -20,6 +20,7 @@ module.exports = (status) => {
   const output = {
     details: meta.title || meta.filename,
     largeImageKey: albumArt[meta.album] || config.rpc.largeIcon,
+    largeImageText: meta.filename, //this is kinda clumsy, tryna to format
     smallImageKey: status.state,
     smallImageText: `Volume: ${Math.round(status.volume / 2.56)}%`,
     instance: true,
